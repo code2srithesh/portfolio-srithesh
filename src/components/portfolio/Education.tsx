@@ -23,15 +23,15 @@ const education = [
 
 const Education = () => (
   <Section id="education" title="Education" label="02 — Academic">
-    <div className="space-y-6">
+    <div className="space-y-4">
       {education.map((item, i) => (
         <div
           key={i}
-          className="group p-6 rounded-xl bg-card border border-border hover:border-glow/20 transition-colors duration-300"
+          className="group p-6 rounded-2xl glass glass-hover transition-all duration-300"
         >
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
             <div>
-              <h3 className="font-semibold text-foreground text-lg">{item.institution}</h3>
+              <h3 className="font-display font-semibold text-foreground text-lg">{item.institution}</h3>
               <p className="text-muted-foreground mt-1">{item.degree}</p>
             </div>
             <div className="sm:text-right shrink-0">

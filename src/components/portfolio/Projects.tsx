@@ -62,11 +62,11 @@ const Projects = () => {
               key={i}
               layout
               onClick={() => setExpandedIndex(isExpanded ? null : i)}
-              className="cursor-pointer group p-6 rounded-xl bg-card border border-border hover:border-glow/20 transition-colors duration-300 glow-sm"
+              className="cursor-pointer group p-6 rounded-2xl glass glass-hover transition-all duration-300"
             >
               <div className="flex items-start justify-between gap-3 mb-3">
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mt-1">{project.subtitle}</p>
@@ -83,7 +83,7 @@ const Projects = () => {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="font-mono text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground"
+                    className="font-mono text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
                   >
                     {tag}
                   </span>

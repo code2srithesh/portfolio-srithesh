@@ -10,10 +10,10 @@ const bullets = [
 
 const Experience = () => (
   <Section id="experience" title="Experience" label="03 — Work">
-    <div className="p-6 md:p-8 rounded-xl bg-card border border-border">
+    <div className="p-6 md:p-8 rounded-2xl glass-strong">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-6">
         <div>
-          <h3 className="text-xl font-semibold text-foreground">NSM Retail Pharmacy</h3>
+          <h3 className="font-display text-xl font-semibold text-foreground">NSM Retail Pharmacy</h3>
           <p className="text-muted-foreground mt-1">Freelance Software Developer — Production Deployment</p>
           <p className="text-muted-foreground text-sm">Karimnagar, India</p>
         </div>
