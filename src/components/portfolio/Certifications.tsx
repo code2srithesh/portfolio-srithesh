@@ -13,9 +13,9 @@ const Certifications = () => (
       {certs.map((cert, i) => (
         <div
           key={i}
-          className="p-5 rounded-xl bg-card border border-border hover:border-glow/20 transition-colors duration-300"
+          className="p-5 rounded-2xl glass glass-hover transition-all duration-300"
         >
-          <h3 className="font-semibold text-foreground">{cert.title}</h3>
+          <h3 className="font-display font-semibold text-foreground">{cert.title}</h3>
           <p className="text-sm text-muted-foreground mt-1 font-mono">{cert.issuer}</p>
         </div>
       ))}

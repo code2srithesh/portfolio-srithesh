@@ -16,7 +16,7 @@ const Section = ({ id, title, label, children, className = "" }: SectionProps) =
 
   return (
     <section id={id} className={`py-24 md:py-32 ${className}`} ref={ref}>
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -28,7 +28,7 @@ const Section = ({ id, title, label, children, className = "" }: SectionProps) =
               {label}
             </p>
           )}
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
           <div className="h-px w-16 glow-line mt-6" />
         </motion.div>
 

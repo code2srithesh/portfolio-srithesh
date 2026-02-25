@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -11,30 +10,36 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Subtle grid background */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
-        backgroundSize: '60px 60px'
-      }} />
+      {/* Animated mesh background */}
+      <div className="absolute inset-0 bg-mesh" />
       
-      {/* Glow orb */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-[0.06]"
-        style={{ background: 'radial-gradient(circle, hsl(192 80% 55%), transparent 70%)' }}
+      {/* Floating orbs */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full opacity-[0.07] animate-pulse-glow"
+        style={{ background: 'radial-gradient(circle, hsl(0 72% 51%), transparent 70%)' }}
+      />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full opacity-[0.05] animate-float"
+        style={{ background: 'radial-gradient(circle, hsl(20 85% 55%), transparent 70%)' }}
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      {/* Subtle grid */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `linear-gradient(hsl(0 72% 51%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 72% 51%) 1px, transparent 1px)`,
+        backgroundSize: '80px 80px'
+      }} />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="font-mono text-sm tracking-[0.2em] uppercase text-primary mb-6">
+          <p className="font-mono text-sm tracking-[0.25em] uppercase text-primary mb-6">
             Software Engineer · Backend & AI Systems
           </p>
         </motion.div>
 
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-8"
+          className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight mb-8"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
@@ -45,7 +50,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -54,20 +59,20 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="flex items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
           <button
             onClick={scrollToProjects}
-            className="px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-opacity"
+            className="w-full sm:w-auto px-8 py-3.5 bg-primary text-primary-foreground font-semibold rounded-xl hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_-5px_hsl(0_72%_51%_/_0.4)]"
           >
             View Projects
           </button>
           <button
             onClick={scrollToContact}
-            className="px-6 py-3 border border-border text-foreground font-medium rounded-lg hover:bg-secondary transition-colors"
+            className="w-full sm:w-auto px-8 py-3.5 glass glass-hover font-semibold rounded-xl transition-all duration-300"
           >
             Contact
           </button>
