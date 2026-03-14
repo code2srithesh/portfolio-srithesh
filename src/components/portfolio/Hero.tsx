@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -10,10 +11,8 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated mesh background */}
       <div className="absolute inset-0 bg-mesh" />
-      
-      {/* Floating orbs */}
+
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full opacity-[0.07] animate-pulse-glow"
         style={{ background: 'radial-gradient(circle, hsl(0 72% 51%), transparent 70%)' }}
       />
@@ -21,65 +20,80 @@ const Hero = () => {
         style={{ background: 'radial-gradient(circle, hsl(20 85% 55%), transparent 70%)' }}
       />
 
-      {/* Subtle grid */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `linear-gradient(hsl(0 72% 51%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 72% 51%) 1px, transparent 1px)`,
         backgroundSize: '80px 80px'
       }} />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <p className="font-mono text-sm tracking-[0.25em] uppercase text-primary mb-6">
-            Software Engineer · Backend & AI Systems
-          </p>
-        </motion.div>
-
-        <motion.h1
-          className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight mb-8"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        >
-          Building systems that{" "}
-          <span className="text-gradient">think, scale,</span>{" "}
-          and ship.
-        </motion.h1>
-
-        <motion.p
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        >
-          I design production-grade backends, architect intelligent automation pipelines, and turn complex problems into clean, reliable software.
-        </motion.p>
-
-        <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <button
-            onClick={scrollToProjects}
-            className="w-full sm:w-auto px-8 py-3.5 bg-primary text-primary-foreground font-semibold rounded-xl hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_-5px_hsl(0_72%_51%_/_0.4)]"
+      <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+        <div className="flex-1 text-center md:text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            View Projects
-          </button>
-          <button
-            onClick={scrollToContact}
-            className="w-full sm:w-auto px-8 py-3.5 glass glass-hover font-semibold rounded-xl transition-all duration-300"
+            <p className="font-mono text-sm tracking-[0.25em] uppercase text-primary mb-6">
+              Software Engineer · Backend & AI Systems
+            </p>
+          </motion.div>
+
+          <motion.h1
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-8"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            Contact
-          </button>
+            Building systems that{" "}
+            <span className="text-gradient">think, scale,</span>{" "}
+            and ship.
+          </motion.h1>
+
+          <motion.p
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-14 leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          >
+            I design production-grade backends, architect intelligent automation pipelines, and turn complex problems into clean, reliable software.
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row items-center md:items-start gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <button
+              onClick={scrollToProjects}
+              className="w-full sm:w-auto px-8 py-3.5 bg-primary text-primary-foreground font-semibold rounded-xl hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_-5px_hsl(0_72%_51%_/_0.4)]"
+            >
+              View Projects
+            </button>
+            <button
+              onClick={scrollToContact}
+              className="w-full sm:w-auto px-8 py-3.5 glass glass-hover font-semibold rounded-xl transition-all duration-300"
+            >
+              Contact
+            </button>
+          </motion.div>
+        </div>
+
+        <motion.div
+          className="shrink-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-primary/30 shadow-[0_0_40px_-10px_hsl(0_72%_51%_/_0.3)]">
+            <img
+              src={profilePhoto}
+              alt="Srithesh — Software Engineer"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 8, 0] }}
