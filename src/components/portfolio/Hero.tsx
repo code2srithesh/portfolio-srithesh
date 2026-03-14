@@ -88,7 +88,7 @@ const Hero = () => {
             <img
               src={profilePhoto}
               alt="Srithesh — Software Engineer"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-[center_30%]"
             />
           </div>
         </motion.div>
