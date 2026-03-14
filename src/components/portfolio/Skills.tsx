@@ -1,11 +1,38 @@
 import Section from "./Section";
 
 const skillGroups = [
-  { label: "Languages", items: ["Java", "Python", "Dart", "HTML", "CSS"] },
-  { label: "Backend & Frameworks", items: ["Spring Boot", "Spring Security", "Spring AI", "Hibernate", "Flutter"] },
-  { label: "Architecture & Security", items: ["Microservices", "REST APIs", "JWT Authentication"] },
-  { label: "Databases", items: ["MySQL", "PostgreSQL"] },
-  { label: "Tools", items: ["Maven", "GitHub", "Docker"] },
+  {
+    label: "💻 Programming Languages",
+    items: ["Java", "Python", "Dart", "HTML", "CSS", "JavaScript", "TypeScript"],
+  },
+  {
+    label: "🌐 Backend & Frameworks",
+    items: ["Spring Boot", "Spring Security", "Spring AI", "Hibernate", "Firebase", "Apache Tomcat", "Apache Maven", "JWT Authentication"],
+  },
+  {
+    label: "🏗️ Architecture & Systems",
+    items: ["Microservices", "REST APIs", "Distributed Systems", "Cloud Infrastructure (AWS)"],
+  },
+  {
+    label: "🗄️ Databases",
+    items: ["MySQL", "PostgreSQL", "SQLite", "Neo4j"],
+  },
+  {
+    label: "📱 Mobile Development",
+    items: ["Flutter"],
+  },
+  {
+    label: "🤖 Machine Learning & Data Science",
+    items: ["PyTorch", "scikit-learn", "NumPy", "Pandas", "Matplotlib", "Whisper AI", "OCR"],
+  },
+  {
+    label: "🔧 DevOps & Version Control",
+    items: ["Git", "GitHub", "Docker", "Linux"],
+  },
+  {
+    label: "🎨 Design & Creative Tools",
+    items: ["Figma", "Adobe Premiere Pro", "Canva", "Blender"],
+  },
 ];
 
 const Skills = () => (

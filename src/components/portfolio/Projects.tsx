@@ -1,51 +1,40 @@
 import Section from "./Section";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "CreditCore",
+    subtitle: "Distributed Financial Engine",
+    description:
+      "Architected a backend-focused microservice application to automate debt tracking via a robust RESTful API infrastructure. Enforced clean code practices and integrated JWT authentication to ensure 100% financial data integrity. The platform demonstrates scalable distributed system design, secure data modeling, and performance optimization.",
+    tags: ["Microservices", "REST API", "JWT", "Backend"],
+    github: "https://github.com/code2srithesh/CreditCore.git",
+  },
+  {
     title: "SkillSwap",
-    subtitle: "Campus-Exclusive Peer Learning Ecosystem",
-    bullets: [
-      "Secure platform restricted to campus-authenticated logins",
-      "Eliminated monetary barriers in peer skill exchange",
-      "Reduced search friction by 40% through localized credential-based matching",
-      "Ensured data privacy and institutional integrity",
-    ],
-    tags: ["Platform", "Auth", "Matching"],
+    subtitle: "Web Development Ecosystem",
+    description:
+      "Engineered a secure full-stack web platform utilizing robust data structures and algorithms to perform localized skill-matching. Enforced strict version control and platform integrity via academic credential verification, reducing search friction by 40% while showcasing collaborative web development and clean software architecture.",
+    tags: ["Full-Stack", "Web App", "Auth", "Firebase"],
+    github: undefined,
+    live: "https://skillswap-26.web.app/",
   },
   {
     title: "PROBE",
-    subtitle: "Skill Reality Verification Engine",
-    bullets: [
-      "Designed Judge–Witness architecture to combat resume inflation",
-      "Treated technical claims as hypotheses requiring proof",
-      "Implemented logic-driven probing challenges",
-      "Delivered bias-free, auditable competency evaluation beyond black-box scoring",
-    ],
-    tags: ["Architecture", "Verification", "Logic"],
-  },
-  {
-    title: "CreditCore",
-    subtitle: "Credit Management Engine",
-    bullets: [
-      "Backend-first financial engine with RESTful APIs",
-      "Automated debt tracking and behavioral credit signals",
-      "JWT authentication + secure audit logging",
-      "Enabled predictive financial planning via structured transaction analysis",
-    ],
-    tags: ["Backend", "Finance", "Security"],
+    subtitle: "AI Automation Verification Engine",
+    description:
+      "Developed an automated Python scripting workflow utilizing a Judge–Witness architecture to validate technical competencies. Integrated AI tools to perform logic-driven probing, acting as an automated testing framework for candidate claims. This ensures a bias-free, auditable evaluation process, demonstrating the ability to execute complex backend logic with new ML/AI technologies.",
+    tags: ["AI/ML", "Python", "Automation", "Architecture"],
+    github: "https://github.com/code2srithesh/probe.git",
   },
   {
     title: "Intelligent Expense Categorizer",
-    subtitle: "AI-Powered Spending Analysis",
-    bullets: [
-      "Multi-modal pipeline using Whisper AI + OCR",
-      "Extracted spending data from physical receipts",
-      "Achieved 85% automated categorization accuracy",
-      "Real-time dashboards translating data into behavioral insights",
-    ],
-    tags: ["AI/ML", "OCR", "Analytics"],
+    subtitle: "Python & ML Pipeline",
+    description:
+      "Minimized manual data entry by developing a multi-modal automation pipeline utilizing Python scripting, Whisper AI, and OCR integration. Achieved 85% accuracy in automated expense categorization, translating raw logs into actionable behavioral insights via real-time dashboards.",
+    tags: ["Python", "Whisper AI", "OCR", "ML"],
   },
 ];
 
@@ -92,20 +81,41 @@ const Projects = () => {
 
               <AnimatePresence>
                 {isExpanded && (
-                  <motion.ul
+                  <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="space-y-2 overflow-hidden"
+                    className="overflow-hidden"
                   >
-                    {project.bullets.map((b, j) => (
-                      <li key={j} className="flex gap-2 text-sm text-secondary-foreground leading-relaxed">
-                        <span className="text-primary shrink-0">▹</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </motion.ul>
+                    <p className="text-sm text-secondary-foreground leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+                    <div className="flex gap-3" onClick={(e) => e.stopPropagation()}>
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <Github className="w-3.5 h-3.5" />
+                          Source Code
+                        </a>
+                      )}
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          Live Demo
+                        </a>
+                      )}
+                    </div>
+                  </motion.div>
                 )}
               </AnimatePresence>
             </motion.div>
