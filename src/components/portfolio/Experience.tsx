@@ -1,11 +1,10 @@
 import Section from "./Section";
 
 const bullets = [
-  "Architected and deployed a production-grade POS + CRM ecosystem to digitize legacy pharmaceutical workflows, reducing manual data-entry errors by 90%.",
-  "Engineered a predictive refill engine using automated purchase-frequency analysis to trigger proactive patient follow-ups, boosting repeat sales and improving inventory turnover accuracy.",
-  "Integrated a secure prescription management module with cloud-based uploads.",
-  "Built real-time analytical dashboards delivering 100% visibility into daily audit metrics, including COGS and net profit margins.",
-  "Transformed raw transactional data into actionable business intelligence for business owners.",
+  "Architected a production-grade web-based POS + CRM ecosystem deployed on cloud infrastructure, leveraging software engineering best practices to reduce manual data-entry errors by 90%.",
+  "Engineered an automated predictive refill engine using programmatic scripting to trigger proactive patient follow-ups, optimizing inventory workflows.",
+  "Integrated a secure prescription management REST API and developed real-time analytical dashboards.",
+  "Executed tasks independently to provide 100% visibility into daily metrics, delivering a high-quality, distributed software solution for the storefront.",
 ];
 
 const Experience = () => (
@@ -14,7 +13,7 @@ const Experience = () => (
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-6">
         <div>
           <h3 className="font-display text-xl font-semibold text-foreground">NSM Retail Pharmacy</h3>
-          <p className="text-muted-foreground mt-1">Freelance Software Developer — Production Deployment</p>
+          <p className="text-muted-foreground mt-1">Freelance Software Developer — Web & Automation</p>
           <p className="text-muted-foreground text-sm">Karimnagar, India</p>
         </div>
         <p className="font-mono text-xs text-primary shrink-0">Jan 2025 – Present</p>
