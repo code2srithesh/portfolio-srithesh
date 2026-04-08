@@ -4,55 +4,58 @@ import { useRef } from "react";
 
 const skillGroups = [
   {
+    label: "🤖 AI / ML / Deep Learning",
+    items: [
+      { name: "PyTorch", level: 70 },
+      { name: "TensorFlow / Keras", level: 65 },
+      { name: "scikit-learn", level: 78 },
+      { name: "NLP (NLTK, TF-IDF)", level: 72 },
+      { name: "Computer Vision", level: 60 },
+      { name: "LLMs & Prompt Eng.", level: 68 },
+      { name: "Whisper AI / OCR", level: 65 },
+    ],
+  },
+  {
+    label: "📊 Data Science & Analytics",
+    items: [
+      { name: "NumPy", level: 80 },
+      { name: "Pandas", level: 80 },
+      { name: "Matplotlib / Seaborn", level: 75 },
+      { name: "Feature Engineering", level: 72 },
+      { name: "Model Validation", level: 70 },
+    ],
+  },
+  {
     label: "💻 Programming Languages",
     items: [
-      { name: "Java", level: 90 },
-      { name: "Python", level: 85 },
+      { name: "Python", level: 90 },
+      { name: "Java", level: 88 },
+      { name: "JavaScript / TypeScript", level: 72 },
       { name: "Dart", level: 65 },
-      { name: "JavaScript", level: 70 },
-      { name: "TypeScript", level: 65 },
-      { name: "HTML/CSS", level: 80 },
+      { name: "HTML / CSS", level: 80 },
     ],
   },
   {
     label: "🌐 Backend & Frameworks",
     items: [
       { name: "Spring Boot", level: 88 },
-      { name: "Spring Security", level: 80 },
-      { name: "Spring AI", level: 70 },
-      { name: "Hibernate", level: 75 },
-      { name: "Firebase", level: 72 },
+      { name: "Spring AI / Gen AI", level: 70 },
       { name: "REST APIs", level: 90 },
+      { name: "Firebase", level: 72 },
       { name: "JWT Auth", level: 85 },
+      { name: "Hibernate", level: 75 },
     ],
   },
   {
-    label: "🗄️ Databases",
+    label: "🗄️ Databases & Infra",
     items: [
-      { name: "MySQL", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "SQLite", level: 70 },
+      { name: "MySQL / PostgreSQL", level: 85 },
       { name: "Neo4j", level: 65 },
-    ],
-  },
-  {
-    label: "🤖 ML & Data Science",
-    items: [
-      { name: "PyTorch", level: 65 },
-      { name: "scikit-learn", level: 70 },
-      { name: "NumPy", level: 75 },
-      { name: "Pandas", level: 75 },
-      { name: "Matplotlib", level: 70 },
-    ],
-  },
-  {
-    label: "🔧 DevOps & Tools",
-    items: [
-      { name: "Git/GitHub", level: 88 },
+      { name: "SQLite", level: 70 },
       { name: "Docker", level: 70 },
+      { name: "AWS", level: 62 },
+      { name: "Git / GitHub", level: 88 },
       { name: "Linux", level: 72 },
-      { name: "Maven", level: 78 },
-      { name: "AWS", level: 60 },
     ],
   },
   {
