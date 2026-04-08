@@ -8,7 +8,7 @@ const projects = [
     title: "CreditCore",
     subtitle: "Distributed Financial Engine",
     description:
-      "Architected a backend-focused microservice application to automate debt tracking via a robust RESTful API infrastructure. Enforced clean code practices and integrated JWT authentication to ensure 100% financial data integrity. The platform demonstrates scalable distributed system design, secure data modeling, and performance optimization.",
+      "Architected a backend-focused microservice application to automate debt tracking via a robust RESTful API infrastructure. Enforced clean code practices and integrated JWT authentication to ensure 100% financial data integrity with validated, reliable outputs. Demonstrates scalable distributed system design, secure data modeling, and production-grade performance optimization.",
     tags: ["Microservices", "REST API", "JWT", "Backend"],
     category: "Backend",
     github: "https://github.com/code2srithesh/CreditCore.git",
@@ -27,7 +27,7 @@ const projects = [
     title: "PROBE",
     subtitle: "AI Automation Verification Engine",
     description:
-      "Developed an automated Python scripting workflow utilizing a Judge–Witness architecture to validate technical competencies. Integrated AI tools to perform logic-driven probing, acting as an automated testing framework for candidate claims. This ensures a bias-free, auditable evaluation process, demonstrating the ability to execute complex backend logic with new ML/AI technologies.",
+      "Developed an automated Python scripting workflow utilizing a Judge–Witness AI architecture to validate technical competencies. Integrated ML-driven probing for bias-free, auditable evaluation with end-to-end model validation. Demonstrates reliable AI/ML pipeline design and complex backend logic execution.",
     tags: ["AI/ML", "Python", "Automation", "Architecture"],
     category: "AI",
     github: "https://github.com/code2srithesh/probe.git",
@@ -36,7 +36,7 @@ const projects = [
     title: "Intelligent Expense Categorizer",
     subtitle: "Python & ML Pipeline",
     description:
-      "Minimized manual data entry by developing a multi-modal automation pipeline utilizing Python scripting, Whisper AI, and OCR integration. Achieved 85% accuracy in automated expense categorization, translating raw logs into actionable behavioral insights via real-time dashboards.",
+      "Minimized manual data entry by developing a multi-modal ML automation pipeline utilizing Python, Whisper AI, and OCR integration. Achieved 85% accuracy in automated expense categorization with validated model outputs, translating raw logs into actionable behavioral insights via real-time dashboards.",
     tags: ["Python", "Whisper AI", "OCR", "ML"],
     category: "AI",
   },
