@@ -97,16 +97,22 @@ const Projects = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="relative mb-8 group"
         >
-          {/* Animated gradient border */}
-          <div className="absolute -inset-[1px] rounded-2xl bg-[conic-gradient(from_0deg,hsl(0_72%_51%),hsl(15_80%_55%),hsl(35_90%_55%),hsl(0_72%_51%))] opacity-40 group-hover:opacity-70 blur-[2px] transition-opacity duration-500 animate-[spin_10s_linear_infinite]" />
+          {/* Soft static gradient border + gentle glow */}
+          <div className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-primary/40 via-primary/10 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-700" />
+          <div className="pointer-events-none absolute -inset-6 rounded-[28px] bg-primary/10 animate-border-glow" />
           <div className="relative rounded-2xl glass-strong p-7 md:p-10 overflow-hidden">
+            {/* Ambient aurora blobs (minimal) */}
+            <div className="pointer-events-none absolute -top-24 -left-16 h-56 w-56 rounded-full bg-primary/20 blur-3xl animate-aurora" />
+            <div className="pointer-events-none absolute -bottom-24 -right-10 h-64 w-64 rounded-full bg-[hsl(35_90%_55%/0.18)] blur-3xl animate-aurora [animation-delay:-6s]" />
             <div
-              className="absolute inset-0 opacity-[0.05] pointer-events-none"
+              className="absolute inset-0 opacity-[0.04] pointer-events-none"
               style={{
                 backgroundImage:
-                  "radial-gradient(600px circle at 20% 20%, hsl(0 72% 51%), transparent 40%), radial-gradient(500px circle at 80% 80%, hsl(35 90% 55%), transparent 40%)",
+                  "linear-gradient(hsl(0 0% 100% / 0.06) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100% / 0.06) 1px, transparent 1px)",
+                backgroundSize: "40px 40px",
               }}
             />
+
             <div className="relative flex items-start justify-between gap-4 flex-wrap mb-4">
               <div>
                 <div className="flex items-center gap-2 mb-3">
