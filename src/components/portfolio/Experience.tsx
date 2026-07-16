@@ -1,5 +1,5 @@
 import Section from "./Section";
-import { Brain, Code, FlaskConical, Briefcase, Sparkles } from "lucide-react";
+import { Brain, Code, FlaskConical, Briefcase, Sparkles, Smartphone } from "lucide-react";
 
 const experiences = [
   {
@@ -13,6 +13,19 @@ const experiences = [
       "Contributing to large-scale EdTech platforms serving millions of students, educators, and administrators worldwide.",
       "Collaborating with senior engineers on backend services, API design, and platform reliability improvements.",
       "Writing production-grade code with strong emphasis on testing, code review, and scalable software engineering practices.",
+    ],
+  },
+  {
+    company: "Silveri Consulting Services Pvt. Ltd.",
+    role: "Software Developer Intern",
+    location: "Koratla, Telangana, India",
+    duration: "May 2026 – Jul 2026",
+    icons: [Code, Smartphone, Sparkles],
+    bullets: [
+      "Designed and developed cross-platform mobile applications using Flutter and Dart, delivering responsive UI/UX and efficient state management.",
+      "Built a comprehensive Restaurant POS mobile application with order management, billing, menu handling, and transaction processing workflows.",
+      "Developed a Bluetooth Peer-to-Peer Chat Application enabling real-time messaging between nearby devices without internet connectivity.",
+      "Tested, debugged, and optimized application performance across multiple Android devices while maintaining version control and project documentation with Git.",
     ],
   },
   {
