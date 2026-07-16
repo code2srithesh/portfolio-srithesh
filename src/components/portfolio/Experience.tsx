@@ -1,5 +1,5 @@
 import Section from "./Section";
-import { Brain, Code, FlaskConical, Briefcase, Sparkles } from "lucide-react";
+import { Brain, Code, FlaskConical, Briefcase, Sparkles, Smartphone } from "lucide-react";
 
 const experiences = [
   {
