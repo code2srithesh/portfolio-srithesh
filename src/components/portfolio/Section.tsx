@@ -29,7 +29,8 @@ const Section = ({ id, title, label, children, className = "" }: SectionProps) =
             </p>
           )}
           <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
-          <div className="h-px w-16 glow-line mt-6" />
+          <div className="mt-6 h-px w-24 bg-gradient-to-r from-primary via-primary/40 to-transparent bg-[length:200%_100%] animate-shimmer" />
+
         </motion.div>
 
         <motion.div
