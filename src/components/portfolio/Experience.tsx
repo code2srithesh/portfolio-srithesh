@@ -1,7 +1,20 @@
 import Section from "./Section";
-import { Brain, Code, FlaskConical } from "lucide-react";
+import { Brain, Code, FlaskConical, Briefcase, Sparkles } from "lucide-react";
 
 const experiences = [
+  {
+    company: "PowerSchool",
+    role: "Software Engineer Intern",
+    location: "Remote",
+    duration: "Jul 2026 – Present",
+    icons: [Briefcase, Code, Sparkles],
+    highlight: true,
+    bullets: [
+      "Contributing to large-scale EdTech platforms serving millions of students, educators, and administrators worldwide.",
+      "Collaborating with senior engineers on backend services, API design, and platform reliability improvements.",
+      "Writing production-grade code with strong emphasis on testing, code review, and scalable software engineering practices.",
+    ],
+  },
   {
     company: "NSM Retail Pharmacy",
     role: "Freelance Software Developer — Web & Automation",
@@ -31,8 +44,20 @@ const experiences = [
 const Experience = () => (
   <Section id="experience" title="Experience" label="03 — Work">
     <div className="space-y-6">
-      {experiences.map((exp, idx) => (
-        <div key={idx} className="p-6 md:p-8 rounded-2xl glass-strong">
+      {experiences.map((exp: any, idx) => (
+        <div
+          key={idx}
+          className={`relative p-6 md:p-8 rounded-2xl glass-strong transition-all duration-500 hover:-translate-y-1 ${
+            exp.highlight
+              ? "border border-primary/30 shadow-[0_0_40px_-10px_hsl(0_72%_51%_/_0.35)]"
+              : ""
+          }`}
+        >
+          {exp.highlight && (
+            <span className="absolute -top-3 left-6 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase bg-primary text-primary-foreground shadow-[0_0_20px_-5px_hsl(0_72%_51%_/_0.5)]">
+              Latest
+            </span>
+          )}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-6">
             <div>
               <div className="flex items-center gap-3">
