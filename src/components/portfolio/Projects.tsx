@@ -1,7 +1,24 @@
 import Section from "./Section";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Sparkles } from "lucide-react";
+
+const featured = {
+  title: "CodeSyn AI",
+  subtitle: "AI-Native Development Companion",
+  description:
+    "A flagship AI engineering platform that fuses large language models, retrieval, and structured tooling to help developers design, generate, and reason about production code. Built around a modular agent architecture with streaming responses, contextual memory, and a polished, real-time UI. Designed for reliability, speed, and a premium developer experience.",
+  tags: ["LLMs", "Gen AI", "RAG", "Full-Stack", "TypeScript", "Python"],
+  category: "AI",
+  github: undefined as string | undefined,
+  live: undefined as string | undefined,
+  highlights: [
+    "Multi-agent reasoning pipeline",
+    "Streaming, low-latency UX",
+    "Context-aware code generation",
+    "Composable tool + retrieval layer",
+  ],
+};
 
 const projects = [
   {
@@ -71,6 +88,65 @@ const Projects = () => {
           </button>
         ))}
       </div>
+
+      {(filter === "All" || filter === featured.category) && (
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mb-8 group"
+        >
+          {/* Animated gradient border */}
+          <div className="absolute -inset-[1px] rounded-2xl bg-[conic-gradient(from_0deg,hsl(0_72%_51%),hsl(15_80%_55%),hsl(35_90%_55%),hsl(0_72%_51%))] opacity-40 group-hover:opacity-70 blur-[2px] transition-opacity duration-500 animate-[spin_10s_linear_infinite]" />
+          <div className="relative rounded-2xl glass-strong p-7 md:p-10 overflow-hidden">
+            <div
+              className="absolute inset-0 opacity-[0.05] pointer-events-none"
+              style={{
+                backgroundImage:
+                  "radial-gradient(600px circle at 20% 20%, hsl(0 72% 51%), transparent 40%), radial-gradient(500px circle at 80% 80%, hsl(35 90% 55%), transparent 40%)",
+              }}
+            />
+            <div className="relative flex items-start justify-between gap-4 flex-wrap mb-4">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase bg-primary/15 text-primary border border-primary/30">
+                    <Sparkles className="w-3 h-3" /> Featured Project
+                  </span>
+                </div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold text-gradient">
+                  {featured.title}
+                </h3>
+                <p className="text-muted-foreground mt-2">{featured.subtitle}</p>
+              </div>
+            </div>
+            <p className="relative text-secondary-foreground leading-relaxed max-w-3xl mb-6">
+              {featured.description}
+            </p>
+            <div className="relative grid sm:grid-cols-2 gap-3 mb-6">
+              {featured.highlights.map((h) => (
+                <div
+                  key={h}
+                  className="flex items-center gap-2.5 text-sm text-secondary-foreground p-3 rounded-xl glass"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_10px_hsl(0_72%_51%)]" />
+                  {h}
+                </div>
+              ))}
+            </div>
+            <div className="relative flex flex-wrap gap-2">
+              {featured.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="font-mono text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
 
       <motion.div layout className="grid md:grid-cols-2 gap-5">
         <AnimatePresence mode="popLayout">

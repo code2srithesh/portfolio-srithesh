@@ -5,7 +5,7 @@ const education = [
     institution: "Vellore Institute of Technology (VIT-AP), Amaravati",
     degree: "Integrated M.Tech in Software Engineering",
     period: "2022 – 2027",
-    score: "CGPA: 8.74",
+    score: "CGPA: 8.71",
   },
   {
     institution: "Bharathi Junior College (VMC)",
