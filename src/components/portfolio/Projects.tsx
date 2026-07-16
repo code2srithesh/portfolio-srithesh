@@ -1,7 +1,24 @@
 import Section from "./Section";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Sparkles } from "lucide-react";
+
+const featured = {
+  title: "CodeSyn AI",
+  subtitle: "AI-Native Development Companion",
+  description:
+    "A flagship AI engineering platform that fuses large language models, retrieval, and structured tooling to help developers design, generate, and reason about production code. Built around a modular agent architecture with streaming responses, contextual memory, and a polished, real-time UI. Designed for reliability, speed, and a premium developer experience.",
+  tags: ["LLMs", "Gen AI", "RAG", "Full-Stack", "TypeScript", "Python"],
+  category: "AI",
+  github: undefined as string | undefined,
+  live: undefined as string | undefined,
+  highlights: [
+    "Multi-agent reasoning pipeline",
+    "Streaming, low-latency UX",
+    "Context-aware code generation",
+    "Composable tool + retrieval layer",
+  ],
+};
 
 const projects = [
   {
