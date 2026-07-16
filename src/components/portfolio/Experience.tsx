@@ -16,6 +16,19 @@ const experiences = [
     ],
   },
   {
+    company: "Silveri Consulting Services Pvt. Ltd.",
+    role: "Software Developer Intern",
+    location: "Koratla, Telangana, India",
+    duration: "May 2026 – Jul 2026",
+    icons: [Code, Smartphone, Sparkles],
+    bullets: [
+      "Designed and developed cross-platform mobile applications using Flutter and Dart, delivering responsive UI/UX and efficient state management.",
+      "Built a comprehensive Restaurant POS mobile application with order management, billing, menu handling, and transaction processing workflows.",
+      "Developed a Bluetooth Peer-to-Peer Chat Application enabling real-time messaging between nearby devices without internet connectivity.",
+      "Tested, debugged, and optimized application performance across multiple Android devices while maintaining version control and project documentation with Git.",
+    ],
+  },
+  {
     company: "NSM Retail Pharmacy",
     role: "Freelance Software Developer — Web & Automation",
     location: "Karimnagar, India",
